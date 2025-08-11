@@ -1,0 +1,174 @@
+/* SFMasster - Salesforce Training Platform */
+.App {
+  text-align: left;
+  background-color: #0d1117;
+  min-height: 100vh;
+  color: #c9d1d9;
+}
+
+/* Remove any default React styling */
+.App-logo {
+  display: none;
+}
+
+.App-header {
+  display: none;
+}
+
+.App-link {
+  display: none;
+}
+
+/* Custom component styles */
+.challenge-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.difficulty-button {
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.difficulty-button:hover {
+  transform: scale(1.02);
+}
+
+.code-editor-container {
+  height: 100%;
+  background: #0d1117;
+}
+
+.monaco-editor-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Status indicators */
+.status-success {
+  color: #238636;
+  background-color: rgba(35, 134, 54, 0.1);
+}
+
+.status-error {
+  color: #da3633;
+  background-color: rgba(218, 54, 51, 0.1);
+}
+
+.status-warning {
+  color: #d29922;
+  background-color: rgba(210, 153, 34, 0.1);
+}
+
+/* Interactive elements */
+.interactive-hover:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Typography enhancements */
+.text-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation classes */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Loading states */
+.button-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.button-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid #ffffff;
+  animation: spin 1s linear infinite;
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible for better keyboard navigation */
+.focus-visible:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+}
+
+/* Custom scrollbars for webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #161b22;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
